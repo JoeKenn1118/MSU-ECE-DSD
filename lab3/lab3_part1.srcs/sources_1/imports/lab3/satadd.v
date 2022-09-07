@@ -34,37 +34,28 @@ module satadd(
     // <p>The resulting sum.</p>
     output [11:0] y
     );
+    wire [12:0] r;
     
-    reg r [12:0];
+    wire Cout, vFlag;
     
-    reg Cout, vFlag;
+    wire aSign, bSign, rSign;
     
-    reg aSign, bSign, rSign;
+    wire [11:0] signedSatSum, unsignedSatSum;
     
-    reg [11:0] signedSatSum, unsignedSatSum;
+    wire [11:0] temp_ans;
     
-    reg temp_ans
-    
+    assign r = (a + b + 0);
     assign aSign = a[11];
     assign bSign = b[11];
-    
-    assign r = a + b + 0;
-    
     assign rSign = r[11];
     
-    assign vFlag = (!aSign && !bSign && rSign) || (aSign && bSign && !rSign) ? 1 : 0; 
+    assign vFlag = (!aSign && !bSign && rSign) || (aSign && bSign && !rSign) ? 1 : 0;
     
     assign Cout = r[12];
+        
+    assign signedSatSum = (vFlag == 1) ? {aSign, {11{!aSign}}} : r[11:0];
     
-    if (vFlag == 1)
-        assign signedSatSum = {12{1'baSign}};
-    else
-        assign signedSatSum = r[11:0];
-    
-    if(Cout == 1)
-        assign unsignedSatSum = {12{1'b1}};
-    else 
-        assign unsignedSetSum = r[11:0];
+    assign unsignedSatSum = (Cout == 1) ? {12{1'b1}} : r[11:0];
     
     
     assign temp_ans = (mode[0] == 0) ? unsignedSatSum : signedSatSum;

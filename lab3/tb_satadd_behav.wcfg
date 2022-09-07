@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_satadd_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_satadd" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,304.678 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="108"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_satadd/uut/a" type="array">
+      <obj_property name="ElementShortName">a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">a[11:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/b" type="array">
+      <obj_property name="ElementShortName">b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">b[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/mode" type="array">
+      <obj_property name="ElementShortName">mode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mode[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/y" type="array">
+      <obj_property name="ElementShortName">y[11:0]</obj_property>
+      <obj_property name="ObjectShortName">y[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/r" type="array">
+      <obj_property name="ElementShortName">r[12:0]</obj_property>
+      <obj_property name="ObjectShortName">r[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/Cout" type="logic">
+      <obj_property name="ElementShortName">Cout</obj_property>
+      <obj_property name="ObjectShortName">Cout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/vFlag" type="logic">
+      <obj_property name="ElementShortName">vFlag</obj_property>
+      <obj_property name="ObjectShortName">vFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/aSign" type="logic">
+      <obj_property name="ElementShortName">aSign</obj_property>
+      <obj_property name="ObjectShortName">aSign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/bSign" type="logic">
+      <obj_property name="ElementShortName">bSign</obj_property>
+      <obj_property name="ObjectShortName">bSign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/rSign" type="logic">
+      <obj_property name="ElementShortName">rSign</obj_property>
+      <obj_property name="ObjectShortName">rSign</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/signedSatSum" type="array">
+      <obj_property name="ElementShortName">signedSatSum[11:0]</obj_property>
+      <obj_property name="ObjectShortName">signedSatSum[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/unsignedSatSum" type="array">
+      <obj_property name="ElementShortName">unsignedSatSum[11:0]</obj_property>
+      <obj_property name="ObjectShortName">unsignedSatSum[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_satadd/uut/temp_ans" type="array">
+      <obj_property name="ElementShortName">temp_ans[11:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_ans[11:0]</obj_property>
+   </wvobject>
+</wave_config>
