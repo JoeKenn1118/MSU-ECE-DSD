@@ -14,18 +14,18 @@ vmap mult_gen_v12_0_18 riviera/mult_gen_v12_0_18
 vmap xil_defaultlib riviera/xil_defaultlib
 
 vcom -work xbip_utils_v3_0_10 -93 \
-"../../../../../../lab4/Part1/lab4_part1.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
 
 vcom -work xbip_pipe_v3_0_6 -93 \
-"../../../../../../lab4/Part1/lab4_part1.ip_user_files/ipstatic/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
 
 vcom -work xbip_bram18k_v3_0_6 -93 \
-"../../../../../../lab4/Part1/lab4_part1.ip_user_files/ipstatic/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
 
 vcom -work mult_gen_v12_0_18 -93 \
-"../../../../../../lab4/Part1/lab4_part1.ip_user_files/ipstatic/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/mult_gen_v12_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -93 \
-"../../../../../../lab4/Part1/lab4_part1.gen/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" \
+"../../../../../../lab4/Part2/lab4_part2.gen/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" \
 
 
