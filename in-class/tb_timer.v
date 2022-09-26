@@ -5,37 +5,25 @@
 
 module tb_adder_datapath;
     // <p>Inputs to UUT</p>
-    reg [15:0] a, b, c;
-    reg clk;
+    reg [15:0] din;
+    reg clk, ld, cnt_en, aclr;
     // <p>Outputs from UUT</p>
-    wire [15:0] y;
+    wire [15:0] dout;
 
     // <p>An <code>integer</code> is essentially a 32-bit register. It's a
     //     convenient way to declare and use 32-bit values.</p>
     integer i;
     integer errors = 0;
 
-    // <p><a
-    //         href="https://www.chipverify.com/verilog/verilog-module-instantiations">Instantiate</a>
-    //     the Unit Under Test (UUT). This means:</p>
-    // <ul>
-    //     <li>Place a copy of the <code>lab1</code> module here; name it
-    //         <code>uut</code>.</li>
-    //     <li>Connect <code>lab1</code>'s <code>LED</code> outputs to the
-    //         wires (declared a few lines earlier in this file) named
-    //         <code>led</code>.</li>
-    //     <li>Likewise, connect <code>lab1</code>'s <code>SW</code> inputs
-    //         to the registers named <code>sw</code> (also declared a few
-    //         lines earlier in this file).</li>
-    // </ul>
-    adder_datapath uut (
+    timer uut (
         .clk(clk),
-        .a(a),
-        .b(b),
-        .c(c),
-        .y(y)
+        .din(din),
+        .ld(ld),
+        .cnt_en(cnt_en),
+        .aclr(aclr),
+        .dout(dout)
     );
-    
+
     // <p>Create a 20 ns clock.</p>
     initial begin
         clk = 0;
@@ -48,23 +36,19 @@ module tb_adder_datapath;
     // <p>Main testbench code.</p>
     initial begin
         // <p>Define the inital value for all inputs.</p>
-        clk = 0;
-        a = 0;
-        b = 0;
-        c = 0;
+        din = 0;
+        ld = 0;
+        cnt_en = 0;
+        aclr = 0;
 
         // <p><a id="delay-100"></a>Wait 100 ns for global reset to finish.</p>
         #100;
-        
 
         $display("Applying vectors...\n");
         i = 0;
         errors = 0;
-        
+
         // <p>Apply a stimulus vector</p>
-        a = 12'h654;
-        b = 12'h456;
-        c = 12'h555;
         // <p>Wait for the values to propagate.</p>
         #100
 
