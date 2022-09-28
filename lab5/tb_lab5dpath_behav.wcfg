@@ -11,8 +11,8 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,765.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="3,570.001 ns"></ZoomEndTime>
+      <ZoomStartTime time="2,496.425 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,199.926 ns"></ZoomEndTime>
       <Cursor1Time time="3,050.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
@@ -32,13 +32,13 @@
       <obj_property name="ElementShortName">x3[9:0]</obj_property>
       <obj_property name="ObjectShortName">x3[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_lab5dpath/y" type="array">
-      <obj_property name="ElementShortName">y[9:0]</obj_property>
-      <obj_property name="ObjectShortName">y[9:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_lab5dpath/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lab5dpath/y" type="array">
+      <obj_property name="ElementShortName">y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">y[9:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_lab5dpath/uut/v1" type="array">
       <obj_property name="ElementShortName">v1[11:0]</obj_property>

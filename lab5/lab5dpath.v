@@ -67,11 +67,11 @@ assign k3 = 12'hC00;
 // multiply -0.5 * 2048 = -1024 = C00 (Hex)
 
 // Multiplication
-mult_gen_0 jdk398_a (.A(v1), .B(k1), .P(t1));
+mult_gen_1 jdk398_a (.A(v1), .B(k1), .CLK(clk), .P(t1));
 
-mult_gen_0 jdk398_b (.A(v2), .B(k2), .P(t2));
+mult_gen_1 jdk398_b (.A(v2), .B(k2), .CLK(clk), .P(t2));
 
-mult_gen_0 jdk398_c (.A(v3), .B(k3), .P(t3));
+mult_gen_1 jdk398_c (.A(v3), .B(k3), .CLK(clk), .P(t3));
 
 // Dropping bits
 assign p1 = t1[22:11];
