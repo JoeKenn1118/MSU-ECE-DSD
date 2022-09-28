@@ -2,7 +2,7 @@
 `timescale 1ns / 1ps
 
 // <p>The number of clock cycles required by the <code>lab5dpath</code> module to produce a result. Modify this based on the pipelining of your design.</p>
-`define LATENCY (3)
+`define LATENCY (5)
 
 module tb_lab5dpath;
 

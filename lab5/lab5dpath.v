@@ -40,14 +40,12 @@ module lab5dpath(
 );
 
 reg signed [11:0] v1, v2, v3;
-reg signed [11:0] s2;
+reg signed [11:0] s1, s2;
 
 wire signed [11:0] k1, k2, k3;
 
 wire signed [23:0] t1, t2, t3;
 wire signed [11:0] p1, p2, p3;
-
-wire signed [11:0] s1;
 
 always @(posedge clk) begin
     v1 <= {x1, 2'b0};
@@ -67,21 +65,20 @@ assign k3 = 12'hC00;
 // multiply -0.5 * 2048 = -1024 = C00 (Hex)
 
 // Multiplication
-mult_gen_1 jdk398_a (.A(v1), .B(k1), .CLK(clk), .P(t1));
+mult_gen_2 jdk398_a (.A(v1), .B(k1), .CLK(clk), .P(t1));
 
-mult_gen_1 jdk398_b (.A(v2), .B(k2), .CLK(clk), .P(t2));
+mult_gen_2 jdk398_b (.A(v2), .B(k2), .CLK(clk), .P(t2));
 
-mult_gen_1 jdk398_c (.A(v3), .B(k3), .CLK(clk), .P(t3));
+mult_gen_2 jdk398_c (.A(v3), .B(k3), .CLK(clk), .P(t3));
 
 // Dropping bits
 assign p1 = t1[22:11];
 assign p2 = t2[22:11];
 assign p3 = t3[22:11];
 
-// Addition
-assign s1 = p2 + p3;
-
 always @(posedge clk) begin
+    // Addition
+    s1 <= p2 + p3;
     s2 <= (s1 + p1);
 end
 
