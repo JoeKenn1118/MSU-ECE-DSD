@@ -1,7 +1,7 @@
-// <h1>Lab 5</h1>
+// <h1>Lab 4</h1>
 // <p>Complete this Verilog module so that it implements the following
 //     schematic:</p>
-// <figure class="image"><img src="lab5datapath.png"
+// <figure class="image"><img src="lab4dpath.png"
 //         alt="A 12x12 multiplier and summer">
 //     <figcaption>Figure 1: Schematic to implement.</figcaption>
 // </figure>
@@ -32,11 +32,78 @@
 //     </tbody>
 // </table>
 module lab5dpath(
-    input clk,
-	input [9:0] x1,
-	input [9:0] x2,
-	input [9:0] x3,
+	input  [9:0] x1,
+	input  [9:0] x2,
+	input  [9:0] x3,
+	input  clk,
 	output [9:0] y
 );
+
+reg signed [11:0] v1, v2, v3;
+reg signed [11:0] s2;
+
+wire signed [11:0] k1, k2, k3;
+
+wire signed [23:0] t1, t2, t3;
+wire signed [11:0] p1, p2, p3;
+
+wire signed [11:0] s1;
+
+always @(posedge clk) begin
+    v1 <= {x1, 2'b0};
+    v2 <= {x2, 2'b0};
+    v3 <= {x3, 2'b0};
+end
+
+
+
+// 12 bit signed fixed point number 1.11
+//    multiply values by 2^11 = 2048
+assign k1 = 12'hC00;
+// multiply -0.5 * 2048 = -1024 = C00 (Hex)
+assign k2 = 12'h500;
+// multiply 0.625 * 2048 = 1280 = 500 (Hex)
+assign k3 = 12'hC00;
+// multiply -0.5 * 2048 = -1024 = C00 (Hex)
+
+// Multiplication
+mult_gen_0 jdk398_a (.A(v1), .B(k1), .P(t1));
+
+mult_gen_0 jdk398_b (.A(v2), .B(k2), .P(t2));
+
+mult_gen_0 jdk398_c (.A(v3), .B(k3), .P(t3));
+
+// Dropping bits
+assign p1 = t1[22:11];
+assign p2 = t2[22:11];
+assign p3 = t3[22:11];
+
+// Addition
+assign s1 = p2 + p3;
+
+always @(posedge clk) begin
+    s2 <= (s1 + p1);
+end
+
+// Drop LSbs sol
+assign y = s2[11:2];
+
+// <h2>Implementation Hints</h2>
+// <ul>
+//     <li>You may only use assignment statements or component
+//         instantiations, you may not use an always block (sequential
+//         statements).</li>
+//     <li>You will need to expand the input values by adding two LSbs
+//         with values of zero. This can be done using concatenation as
+//         follows:</li>
+// </ul>
+//wire v1[11:0];
+//assign v1 = {x1, 2'b00};   
+// <p>When you have to drop bits, just choose which bits you want to keep
+//     by the bus indices. For example, the following statement drops the
+//     two LSbs of <code>s2</code> to form <code>y</code>.</p>
+//assign y = s2[11:2];
+// <p>You may remove or edit these lines of code &ndash; they are only
+//     hints.</p>
 
 endmodule
