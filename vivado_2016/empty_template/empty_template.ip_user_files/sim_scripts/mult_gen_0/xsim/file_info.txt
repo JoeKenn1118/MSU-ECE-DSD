@@ -1,1 +1,1 @@
-mult_gen_0.vhd,vhdl,xil_defaultlib,../../../../../../lab4/Part2/lab4_part2.gen/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd,
+mult_gen_0.vhd,vhdl,xil_defaultlib,../../../../../../lab6/lab6_files_part1/lab6_part1.gen/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd,
