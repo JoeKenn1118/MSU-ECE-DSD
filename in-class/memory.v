@@ -111,9 +111,13 @@ module basys_memory(
     //             display</a>.</li>
     // </ul>
     reg do_read_delayed = 1'b1;
+    reg [15:0] display_addr = 15'b0; 
+    
     always @(posedge CLK) begin
         do_read_delayed <= do_read | do_write;
     end
+    
+    sevenseg ss1(.clk(CLK), .reset(reset), .ld(do_read_delayed), .din({waddr[7:0], raddr[7:0]}), .dp());
     
     // <p>Connect memory in.</p>
     blk_mem_gen_0 mem(
