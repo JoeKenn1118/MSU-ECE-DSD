@@ -5,24 +5,24 @@
 
 module tb_adder_datapath;
     // <p>Inputs to UUT</p>
-    reg [15:0] din;
-    reg clk, ld, cnt_en, aclr;
+//    reg [15:0] din;
+      reg clk;//, ld, cnt_en, aclr;
     // <p>Outputs from UUT</p>
-    wire [15:0] dout;
-
+//    wire [15:0] dout;
+   reg [152:0] q = 153'h4;
     // <p>An <code>integer</code> is essentially a 32-bit register. It's a
     //     convenient way to declare and use 32-bit values.</p>
     integer i;
     integer errors = 0;
 
-    timer uut (
-        .clk(clk),
-        .din(din),
-        .ld(ld),
-        .cnt_en(cnt_en),
-        .aclr(aclr),
-        .dout(dout)
-    );
+    //timer uut (
+    //    .clk(clk),
+    //    .din(din),
+    //    .ld(ld),
+    //    .cnt_en(cnt_en),
+    //    .aclr(aclr),
+    //    .dout(dout)
+    //);
 
     // <p>Create a 20 ns clock.</p>
     initial begin
@@ -33,31 +33,36 @@ module tb_adder_datapath;
         end
     end
 
+
+    always @(posedge clk) begin
+        q <= {q[151:0], q[152]^q[151]};
+    end
     // <p>Main testbench code.</p>
     initial begin
         // <p>Define the inital value for all inputs.</p>
-        din = 0;
-        ld = 0;
-        cnt_en = 0;
-        aclr = 0;
-
+//        din = 0;
+//        ld = 0;
+//        cnt_en = 0;
+//        aclr = 0;
+        
+        
         // <p><a id="delay-100"></a>Wait 100 ns for global reset to finish.</p>
         #100;
 
-        $display("Applying vectors...\n");
-        i = 0;
-        errors = 0;
+//        $display("Applying vectors...\n");
+//        i = 0;
+//        errors = 0;
 
-        // <p>Apply a stimulus vector</p>
-        // <p>Wait for the values to propagate.</p>
-        #100
+//        // <p>Apply a stimulus vector</p>
+//        // <p>Wait for the values to propagate.</p>
+//        #100
 
-        // <p>Error check after the loop completes.</p>
-        if (errors == 0) begin
-            $display("PASS: All test vectors passed\n");
-        end else begin
-            $display("FAIL: %d errors occurred\n", errors);
-        end
+//        // <p>Error check after the loop completes.</p>
+//        if (errors == 0) begin
+//            $display("PASS: All test vectors passed\n");
+//        end else begin
+//            $display("FAIL: %d errors occurred\n", errors);
+//        end
     end
 
 endmodule
