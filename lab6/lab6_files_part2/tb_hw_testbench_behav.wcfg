@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_hw_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_hw_testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="8,575.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="8,792.501 ns"></ZoomEndTime>
+      <Cursor1Time time="8,695.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="138"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/tb_hw_testbench/uut/board_clk" type="logic">
+      <obj_property name="ElementShortName">board_clk</obj_property>
+      <obj_property name="ObjectShortName">board_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/SW" type="array">
+      <obj_property name="ElementShortName">SW[0:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/LED" type="array">
+      <obj_property name="ElementShortName">LED[2:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/SSEG_CA" type="array">
+      <obj_property name="ElementShortName">SSEG_CA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SSEG_CA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/SSEG_AN" type="array">
+      <obj_property name="ElementShortName">SSEG_AN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SSEG_AN[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/clk_50mhz" type="logic">
+      <obj_property name="ElementShortName">clk_50mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_50mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/debounceLoad" type="logic">
+      <obj_property name="ElementShortName">debounceLoad</obj_property>
+      <obj_property name="ObjectShortName">debounceLoad</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/swq1" type="logic">
+      <obj_property name="ElementShortName">swq1</obj_property>
+      <obj_property name="ObjectShortName">swq1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/lfsr_ld" type="logic">
+      <obj_property name="ElementShortName">lfsr_ld</obj_property>
+      <obj_property name="ObjectShortName">lfsr_ld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/lfsr_dout" type="array">
+      <obj_property name="ElementShortName">lfsr_dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">lfsr_dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/uut_dout" type="array">
+      <obj_property name="ElementShortName">uut_dout[9:0]</obj_property>
+      <obj_property name="ObjectShortName">uut_dout[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/uut_irdy" type="logic">
+      <obj_property name="ElementShortName">uut_irdy</obj_property>
+      <obj_property name="ObjectShortName">uut_irdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/uut_ordy" type="logic">
+      <obj_property name="ElementShortName">uut_ordy</obj_property>
+      <obj_property name="ObjectShortName">uut_ordy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/vectorsDone" type="logic">
+      <obj_property name="ElementShortName">vectorsDone</obj_property>
+      <obj_property name="ObjectShortName">vectorsDone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/vector_count" type="array">
+      <obj_property name="ElementShortName">vector_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vector_count[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/result_sum" type="array">
+      <obj_property name="ElementShortName">result_sum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_sum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/state_counter" type="array">
+      <obj_property name="ElementShortName">state_counter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_counter[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hw_testbench/uut/NUM_VECTORS" type="array">
+      <obj_property name="ElementShortName">NUM_VECTORS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_VECTORS[31:0]</obj_property>
+   </wvobject>
+</wave_config>

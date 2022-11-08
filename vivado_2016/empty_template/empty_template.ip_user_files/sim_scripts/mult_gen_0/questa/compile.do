@@ -14,18 +14,18 @@ vmap mult_gen_v12_0_18 questa_lib/msim/mult_gen_v12_0_18
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 
 vcom -work xbip_utils_v3_0_10  -93 \
-"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+"../../../../../../lab6/lab6_files_part2/lab6_part2.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
 
 vcom -work xbip_pipe_v3_0_6  -93 \
-"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+"../../../../../../lab6/lab6_files_part2/lab6_part2.ip_user_files/ipstatic/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
 
 vcom -work xbip_bram18k_v3_0_6  -93 \
-"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+"../../../../../../lab6/lab6_files_part2/lab6_part2.ip_user_files/ipstatic/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
 
 vcom -work mult_gen_v12_0_18  -93 \
-"../../../../../../lab4/Part2/lab4_part2.ip_user_files/ipstatic/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+"../../../../../../lab6/lab6_files_part2/lab6_part2.ip_user_files/ipstatic/hdl/mult_gen_v12_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib  -93 \
-"../../../../../../lab4/Part2/lab4_part2.gen/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" \
+"../../../../../../lab6/lab6_files_part2/lab6_part2.gen/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" \
 
 
