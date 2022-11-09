@@ -76,14 +76,14 @@ module tb_fifo;
 		errors = 0;
 		count = 0;
 		
-		fd = $fopen("../../../fifo_vectors.txt","r");
+		fd = $fopen("../../../../fifo_vectors.txt","r");
         if (fd == 0) begin
           //for post-route simulation, one directory deeper
-          fd = $fopen("../../../../fifo_vectors.txt","r");
+          fd = $fopen("../../../../../fifo_vectors.txt","r");
         end
                 
         if (fd == 0) begin
-          $display("Cannot open vectors file 'fifo_vectors.txt.txt', simulation exiting");
+          $display("Cannot open vectors file 'fifo_vectors.txt', simulation exiting");
           $finish;
         end
 
@@ -101,22 +101,22 @@ module tb_fifo;
 		 @(negedge clk);
 		 if (i_rden) begin
 			if (i_rdata == dout) begin
-			 $display("%d(%t) Pass: dout: %x",count,$time,dout);
+			 $display("%d(%6t) Pass: dout: %x",count,$time,dout);
 			end else begin
-			 $display("%d(%t) FAIL: dout: %x(%x)",count,$time,dout,i_rdata);
+			 $display("%d(%6t) FAIL: dout: %x(%x)",count,$time,dout,i_rdata);
 			 errors = errors+1;
 			end
 		 end //end if (i_rden)
 		 
 		 if (i_full == full) $display("%d Pass: full: %x",count,full);
 		 else begin
-		  $display("%d(%t): FAIL: full: %x (%x)",count,$time,full,i_full);
+		  $display("%d(%6t): FAIL: full: %x (%x)",count,$time,full,i_full);
 		   errors = errors+1;
 		 end
 		 
 		 if (i_empty == empty) $display("%d Pass: empty: %x",count,empty);
 		 else begin
-		  $display("%d(%t): FAIL: empty: %x (%x)",count,$time,empty,i_empty);
+		  $display("%d(%6t): FAIL: empty: %x (%x)",count,$time,empty,i_empty);
 		   errors = errors+1;
 		 end
 		 
@@ -127,9 +127,9 @@ module tb_fifo;
 		
 	
 		if (errors == 0) begin
-			$display("(%t)PASSED: All vectors passed",$time);
+			$display("(%6t)PASSED: All vectors passed",$time);
 		end else begin
-		  $display("(%t)FAILED: %d vectors failed",$time,errors);
+		  $display("(%6t)FAILED: %d vectors failed",$time,errors);
 		end
 
 	end
