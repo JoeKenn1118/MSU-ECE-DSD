@@ -14,13 +14,13 @@ module button_pulse(
     output pressed
 );
     // Synchronize the pushbutton to the clock.
-    reg sync_button;
+    logic sync_button;
     always @(posedge clk) begin
         sync_button <= button;
     end
 
     // Keep track of the current pushbutton state.    
-    reg button_state = 1'b0;
+    logic button_state = 1'b0;
     always @(posedge clk) begin
         button_state <= sync_button;
     end
@@ -50,8 +50,8 @@ module mem_addr(
     button_pulse bp1(dec_button, clk, addr_dec);
     
     // Update the address based on reset/inc/dec.
-    reg [9:0] reg_addr = 10'h000;
-    reg reg_delta = 1'b0;
+    logic [9:0] reg_addr = 10'h000;
+    logic reg_delta = 1'b0;
     always @(posedge clk) begin
         if (reset) begin
             reg_addr <= 10'h000;
@@ -115,7 +115,7 @@ module basys_memory(
     );
     
     // Connect memory in.
-    blk_mem_gen_0 mem(
+    blk_mem_gen_1 mem(
         // Write port.
         .dina(SW),
         .ena(do_write),

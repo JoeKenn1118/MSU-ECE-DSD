@@ -8,17 +8,17 @@ module sevenseg(
     // four decimal points
     input[3:0] dp,
     // The common cathodes for the 7-segment displays.
-    output reg [7:0] SSEG_CA,
+    output logic [7:0] SSEG_CA,
     // The anodes (low true) for the 7-segment displays.
-    output reg [3:0] SSEG_AN
+    output logic [3:0] SSEG_AN
 );
 
     // input register
-    reg [15:0] dinq;
-    reg [3:0] dpq;
+    logic [15:0] dinq;
+    logic [3:0] dpq;
 
     // 2-bit counter for anode
-    reg [1:0] anodeCounter;
+    logic [1:0] anodeCounter;
 
     // switch between digits every 4 ms, all four digits every 16 ms
     wire anondeChange;
@@ -40,8 +40,8 @@ module sevenseg(
         end
     end
 
-    reg [3:0] digit;
-    reg dpoint;
+    logic [3:0] digit;
+    logic dpoint;
 
     // anode decode
     always @* begin

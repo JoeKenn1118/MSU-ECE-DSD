@@ -15,7 +15,7 @@ module pulsegenMS
 );
 
     // lets be lazy and use a 32 bit counter, unused bits will be optimized away
-    reg [31:0] cntr;
+    logic [31:0] cntr;
 
     // this signal asserted to reset the counter.
     assign pulse = (cntr == PERIOD_MAX);
